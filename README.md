@@ -72,14 +72,18 @@ SHIELD_EXTENSION/
 
 ## 🚀 Como usar o analisador automático
 
-O projeto agora conta com um script em Python para automatizar a análise estática das extensões.
+O projeto agora conta com uma ferramenta otimizada em **Go** para automatizar a análise estática das extensões. O uso de Go permite realizar a verredura concorrente de milhares de arquivos JavaScript de forma extremamente rápida.
 
-1. Certifique-se de ter o Python 3 instalado.
-2. Execute o script passando o link do repositório da extensão ou o caminho local:
+1. Certifique-se de ter o [Go](https://golang.org/) instalado.
+2. Compile a ferramenta:
    ```bash
-   python3 shield_analyzer.py https://github.com/usuario/extensao-exemplo
+   go build -o shield_analyzer main.go
    ```
-3. O script irá baixar o código para `src/codigo-analisado/`, realizar a análise e gerar um relatório automático na pasta `reports/`.
+3. Execute passando o link do repositório da extensão ou o caminho local:
+   ```bash
+   ./shield_analyzer https://github.com/usuario/extensao-exemplo
+   ```
+4. A ferramenta irá baixar o código para `src/codigo-analisado/`, realizar a análise concorrente e gerar um relatório automático na pasta `reports/`.
 
 ## 🚨 Importante
 
