@@ -70,6 +70,17 @@ SHIELD_EXTENSION/
 - [Análise dinâmica](docs/analise-dinamica.md)
 - [Checklist de segurança](docs/checklist-seguranca.md)
 
+## 🚀 Como usar o analisador automático
+
+O projeto agora conta com um script em Python para automatizar a análise estática das extensões.
+
+1. Certifique-se de ter o Python 3 instalado.
+2. Execute o script passando o link do repositório da extensão ou o caminho local:
+   ```bash
+   python3 shield_analyzer.py https://github.com/usuario/extensao-exemplo
+   ```
+3. O script irá baixar o código para `src/codigo-analisado/`, realizar a análise e gerar um relatório automático na pasta `reports/`.
+
 ## 🚨 Importante
 
 Este projeto é voltado para análise e segurança, e deve ser usado apenas em contextos legítimos, éticos e autorizados, com foco em prevenção, investigação e redução de risco.
