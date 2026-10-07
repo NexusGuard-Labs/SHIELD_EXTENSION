@@ -70,6 +70,21 @@ SHIELD_EXTENSION/
 - [Análise dinâmica](docs/analise-dinamica.md)
 - [Checklist de segurança](docs/checklist-seguranca.md)
 
+## 🚀 Como usar o analisador automático
+
+O projeto agora conta com uma ferramenta otimizada em **Go** para automatizar a análise estática das extensões. O uso de Go permite realizar a verredura concorrente de milhares de arquivos JavaScript de forma extremamente rápida.
+
+1. Certifique-se de ter o [Go](https://golang.org/) instalado.
+2. Compile a ferramenta:
+   ```bash
+   go build -o shield_analyzer main.go
+   ```
+3. Execute passando o link do repositório da extensão ou o caminho local:
+   ```bash
+   ./shield_analyzer https://github.com/usuario/extensao-exemplo
+   ```
+4. A ferramenta irá baixar o código para `src/codigo-analisado/`, realizar a análise concorrente e gerar um relatório automático na pasta `reports/`.
+
 ## 🚨 Importante
 
 Este projeto é voltado para análise e segurança, e deve ser usado apenas em contextos legítimos, éticos e autorizados, com foco em prevenção, investigação e redução de risco.
